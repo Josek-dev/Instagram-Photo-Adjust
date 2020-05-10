@@ -9,6 +9,7 @@ $(document).ready(function() {
                 fileReader.onload =
                 (function(e) {
                     $("#uploaded").css("display", "block");
+                    $("#wymiary").css("display", "block");
                     var file = e.target;
                     $("<img>",{
                         class : "originalImage",
