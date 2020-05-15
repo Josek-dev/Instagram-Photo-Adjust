@@ -1,20 +1,20 @@
 $(document).ready(function() {
 
-    window.onscroll = function() {
-        stick();
-    }   
+    // window.onscroll = function() {
+    //     stick();
+    // }   
 
-    function stick() {
-        var topBar = document.getElementById("author");
+    // function stick() {
+    //     var topBar = document.getElementById("author");
         
-        if (window.pageYOffset > topBar.offsetTop) {
-            //topBar.classList.add("sticky");
-            $("#author").attr("class", "sticky");
-        }
-        else {
-            topBar.classList.remove("sticky");
-        }
-    }
+    //     if (window.pageYOffset > topBar.offsetTop) {
+    //         //topBar.classList.add("sticky");
+    //         $("#author").attr("class", "sticky");
+    //     }
+    //     else {
+    //         topBar.classList.remove("sticky");
+    //     }
+    // }
 
     var realWidth = 0;
 	var realHeight = 0; 

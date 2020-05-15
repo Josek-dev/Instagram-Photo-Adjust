@@ -1,3 +1,13 @@
+:root {
+  --ig-gradient: linear-gradient(210deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+}
+
+body {
+  background: #eee;
+  margin: 0;
+  padding: 0;
+}
+
 #author {
   width: 100%;
   height: 20px;
@@ -6,9 +16,9 @@
   font-size: 14px;
   color: #4da64d;
   text-align: center;
-  position: relative;
-  top: 0px;
-  margin-bottom: 30px;
+  position: fixed;
+  bottom: 0px;
+  margin-top: 30px;
 }
 
 #author em {
@@ -24,27 +34,21 @@ em::after {
   animation: blinks 3s infinite ease-in;
 }
 
-.sticky { background: rgba(0, 0, 0, 0.5) !important; position: fixed !important; top:0; }
 
-.sticky + .grid {
-  margin-top: 30px;
-}
-
-input[type="file"] {
+input {
     width: 1px;
     height:1px;
     opacity: 0;
 }
 
-#uploadButton, #getResolution {
+#uploadButton {
     display:block;
     width: 150px;
-    height: auto;
     margin-bottom:15px;
     padding: 5px;
     text-align: center;
-    background: #4CAF50;
-    border-radius: 5px;
+    background: var(--ig-gradient);
+    border-radius: 1px;
     text-shadow: 1px 1px 5px black;
 }
 
@@ -56,28 +60,21 @@ input[type="file"] {
   border: 5px white solid;
 }
 
-body {
-  background: #eee;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-}
-.grid {
+
+.content {
 
 width: 80%;
-background: #000;
+background: black;
 min-height: 500px;
 margin: 0 auto;
-box-shadow: -10px 10px 40px #555;
 }
+
 header {
-margin: 0;
-width: 80%;
-background: linear-gradient(#555, #000);
-margin: 0 auto;
-border-bottom: 2px solid #555;
-border-radius: 0 0 15px 15px;
+  width: 100%;
+  height: 100px;
+  background: var(--ig-gradient);
+  margin: 0 auto;
+  border-radius: 0 0 15px 15px;
 }
 
 @keyframes blinks {
@@ -98,23 +95,18 @@ border-radius: 0 0 15px 15px;
   margin: 0 auto;
   padding: 10px;
 }
-.content > *, .result > * {
+/* .content > *, .result > * {
 font: 11px;
 color: #eee;
-font-family: Calibri, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.content > p, .content > input {
+font-family: Calibri, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+
+/* .content > p, .content > input {
     margin:0;
-}
+} */
 .result {
   display: flex;
   background: #333;
-flex-direction: row;
-flex-wrap: nowrap;
-justify-content: flex-start;
-align-items: stretch;
-align-content: stretch;
-padding:0;
+  padding:0;
 }
 h3 {
   font-size: 18px;
@@ -132,8 +124,8 @@ h3 {
 #centered {
   order: 2;
   background:cyan;
-width: 20%;
-margin:0;
+  width: 20%;
+  margin:0;
 }
 #righted {
   order: 3;
