@@ -22,11 +22,19 @@ $(document).ready(function() {
                     image.onload = function() {
                         var realWidth = this.width;
                         var realHeight = this.height;
-                        $("#wymiary").text("Szerokośc: "+ realWidth +" Wysokość: "+ realHeight);
+                        $("#wymiary").text("<b>Szerokośc:</b> "+ realWidth +" Wysokość: "+ realHeight);
                     }                  
                 });
                 fileReader.readAsDataURL(f); }});
-                
+                // $("#getResolution").click(function() {
+                //     var img = $(".originalImage");
+                        
+                //     $("<img>").attr("src", $(img).attr("src")).on("load", function(){
+                //     var realWidth = this.width;
+                //     var realHeight = this.height;
+                //     $("#wymiary").text("Szerokośc: "+ realWidth +" Wysokość: "+ realHeight);
+                //     });
+                // });
     
            
  });
