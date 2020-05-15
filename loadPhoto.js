@@ -1,5 +1,25 @@
 $(document).ready(function() {
-            $("#photoUpload").on("change",function(e) {
+
+    window.onscroll = function() {
+        stick();
+    }   
+
+    function stick() {
+        var topBar = document.getElementById("author");
+        
+        if (window.pageYOffset > topBar.offsetTop) {
+            //topBar.classList.add("sticky");
+            $("#author").attr("class", "sticky");
+        }
+        else {
+            topBar.classList.remove("sticky");
+        }
+    }
+
+    var realWidth = 0;
+	var realHeight = 0; 
+    
+        $("#photoUpload").on("change",function(e) {
             var files = e.target.files;
             var length = files.length;
             for (var i = 0; i < length; i++) {
@@ -9,7 +29,7 @@ $(document).ready(function() {
                 fileReader.onload =
                 (function(e) {
                     $("#uploaded").css("display", "block");
-                    $("#wymiary").css("display", "block");
+                    $("#getResolution").css("display", "inline-block");
                     var file = e.target;
                     $("<img>",{
                         class : "originalImage",
@@ -18,7 +38,7 @@ $(document).ready(function() {
                         }).insertAfter("#uploaded");                    
                 });
                 fileReader.readAsDataURL(f); }});
-                $("#wymiary").click(function() {
+                $("#getResolution").click(function() {
                     var img = $(".originalImage");
                         
                     $("<img>").attr("src", $(img).attr("src")).on("load", function(){
@@ -27,4 +47,8 @@ $(document).ready(function() {
                     $("#wymiary").text("Szerokosc: "+ realWidth +" Wyokosc: "+ realHeight);
                     });
                 });
-            });
+           
+           
+           
+           
+ });
