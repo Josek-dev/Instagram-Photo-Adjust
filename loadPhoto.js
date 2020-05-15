@@ -22,7 +22,7 @@ $(document).ready(function() {
                     image.onload = function() {
                         var realWidth = this.width;
                         var realHeight = this.height;
-                        $("#wymiary").text("<b>Szerokośc:</b> "+ realWidth +" Wysokość: "+ realHeight);
+                        $("#wymiary").text("Szerokośc: "+ realWidth +" Wysokość: "+ realHeight);
                     }                  
                 });
                 fileReader.readAsDataURL(f); }});
