@@ -1,21 +1,5 @@
 $(document).ready(function() {
 
-    // window.onscroll = function() {
-    //     stick();
-    // }   
-
-    // function stick() {
-    //     var topBar = document.getElementById("author");
-        
-    //     if (window.pageYOffset > topBar.offsetTop) {
-    //         //topBar.classList.add("sticky");
-    //         $("#author").attr("class", "sticky");
-    //     }
-    //     else {
-    //         topBar.classList.remove("sticky");
-    //     }
-    // }
-
     var realWidth = 0;
 	var realHeight = 0; 
     
@@ -42,13 +26,21 @@ $(document).ready(function() {
                     var img = $(".originalImage");
                         
                     $("<img>").attr("src", $(img).attr("src")).on("load", function(){
-                    var realWidth = this.width;
-                    var realHeight = this.height;
-                    $("#wymiary").text("Szerokosc: "+ realWidth +" Wyokosc: "+ realHeight);
+                    realWidth = this.width;
+                    realHeight = this.height;
+                    $("#wymiary").text("Szerokośc: "+ realWidth +" Wysokość: "+ realHeight);
                     });
                 });
            
-           
+        $("#sizeer").click(function() {
+            if(realWidth >= realHeight) {
+                realWidth=realHeight;  
+            }
+            else { 
+                realHeight=realWidth;
+            }
+            alert(realWidth+","+realHeight); 
+        });
            
            
  });

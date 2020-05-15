@@ -2,14 +2,18 @@
   --ig-gradient: linear-gradient(210deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
 }
 
+@font-face {
+  font-family: "wegan";
+  font-style: normal;
+  font-weight: normal;
+  src: url("Vegan\ Style\ Personal\ Use.ttf");
+}
 body {
   background: #eee;
   margin: 0;
   padding: 0;
+  font-family: Calibri, Tahoma, Geneva, Verdana, sans-serif;
 }
-
-
-
 
 input {
     width: 1px;
@@ -24,8 +28,9 @@ input {
     padding: 5px;
     text-align: center;
     background: var(--ig-gradient);
-    border-radius: 1px;
-    text-shadow: 1px 1px 5px black;
+    border-radius: 15px 15px 0px 0px;
+    text-shadow: 1px 1px 8px black;
+    color: white;
 }
 
 .originalImage {
@@ -33,18 +38,17 @@ input {
   max-height: 80%;
   width: auto;
   height: auto;
-  border: 5px white solid;
+  border: 5px #833ab4 solid;
 }
 
-
 .content {
-
-width: 80%;
-background: radial-gradient(#bbb 15%, #eee 85%);
-min-height: 500px;
-margin: 0 auto;
-box-shadow: -5px 20px 50px #999;
-border-radius: 30px;
+  width: 80%;
+  background: none;
+  min-height: 500px;
+  margin: 0 auto;
+  box-shadow: -5px 20px 50px #999;
+  border-radius: 30px;
+  border-bottom: #fff 1px solid;
 }
 
 header {
@@ -52,7 +56,17 @@ header {
   height: 100px;
   background: var(--ig-gradient);
   margin: 0 auto;
-  border-radius: 0 0 15px 15px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+h1 {
+  font-family: "wegan";
+  color: #fff;
+  font-size: 32px;
+  display: inline-block;
+  float: center;
+  padding: 10 0 10px 0;
 }
 
 @keyframes blinks {
@@ -66,23 +80,26 @@ header {
       opacity: 0;
   }
 }
-.result {
-  width: 80%;
-  background: black;
-  height: auto;
-  margin: 0 auto;
+
+p {
   padding: 10px;
+  margin-bottom: 0;
 }
+
+fieldset {
+  border: 0;
+  padding-top:0;
+}
+
 .result {
   display: flex;
-  background: #333;
+  background: #fff;
   padding:0;
 }
-h3 {
-  font-size: 18px;
-  color:#4da64d;
-}
+
 #uploaded {
+  font-size: 18px;
+  color:#c13584;
   display:none;
 }
 #lefted { 
@@ -132,3 +149,4 @@ em::after {
   visibility: visible;
   animation: blinks 3s infinite ease-in;
 }
+
