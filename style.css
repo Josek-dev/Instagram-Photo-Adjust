@@ -8,31 +8,7 @@ body {
   padding: 0;
 }
 
-#author {
-  width: 100%;
-  height: 20px;
-  background: black;
-  font-family: Consolas, "Lucida Console";
-  font-size: 14px;
-  color: #4da64d;
-  text-align: center;
-  position: fixed;
-  bottom: 0px;
-  margin-top: 30px;
-}
 
-#author em {
-  font-style: normal;
-}
-
-em::after {
-  content: "|";
-  color: #fff;
-  font-size: 14px;
-  font-weight: bolder;
-  visibility: visible;
-  animation: blinks 3s infinite ease-in;
-}
 
 
 input {
@@ -64,9 +40,11 @@ input {
 .content {
 
 width: 80%;
-background: black;
+background: radial-gradient(#bbb 15%, #eee 85%);
 min-height: 500px;
 margin: 0 auto;
+box-shadow: -5px 20px 50px #999;
+border-radius: 30px;
 }
 
 header {
@@ -88,21 +66,13 @@ header {
       opacity: 0;
   }
 }
-.content, .result {
+.result {
   width: 80%;
   background: black;
   height: auto;
   margin: 0 auto;
   padding: 10px;
 }
-/* .content > *, .result > * {
-font: 11px;
-color: #eee;
-font-family: Calibri, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-
-/* .content > p, .content > input {
-    margin:0;
-} */
 .result {
   display: flex;
   background: #333;
@@ -135,4 +105,30 @@ h3 {
 }
 #getResolution {
     display: none;
+}
+
+#author {
+  width: 100%;
+  height: 20px;
+  background: black;
+  font-family: Consolas, "Lucida Console";
+  font-size: 14px;
+  color: #4da64d;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  margin-top: 30px;
+}
+
+#author em {
+  font-style: normal;
+}
+
+em::after {
+  content: "|";
+  color: #fff;
+  font-size: 14px;
+  font-weight: bolder;
+  visibility: visible;
+  animation: blinks 3s infinite ease-in;
 }
