@@ -16,8 +16,17 @@ $(document).ready(function() {
                         class : "originalImage",
                         src : e.target.result,
                         title : file.name
-                        }).insertAfter("#uploaded");                    
+                        }).insertAfter("#uploaded");
+                    var image = new Image();
+                    image.src = e.target.result;
+                    image.onload = function() {
+                        var realWidth = this.width;
+                        var realHeight = this.height;
+                        $("#wymiary").text("Szerokośc: "+ realWidth +" Wysokość: "+ realHeight);
+                    }                  
                 });
-                fileReader.readAsDataURL(f); }});     
+                fileReader.readAsDataURL(f); }});
+                
+    
            
  });
