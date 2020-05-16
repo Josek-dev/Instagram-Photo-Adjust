@@ -1,1 +1,1 @@
-"use strict";
+"use strict";var zdj=document.getElementsByClassName("originalImage")[0],originalWidth=zdj.naturalWidth,originalHeight=zdj.naturalHeight;function getSquare(){return originalHeight<=originalWidth?originalWidth=originalHeight:originalHeight=originalWidth,originalWidth}var newWidth=originalWidth,newHeight=originalWidth;function createBackground(){img=new Image,img.src=zdj.src,img.onload=function(){var i=document.createElement("canvas"),t=i.getContext("2d");i.width=newWidth,i.height=newHeight,t.drawImage(img,0,0,newWidth,newHeight),document.body.appendChild(i)}}
