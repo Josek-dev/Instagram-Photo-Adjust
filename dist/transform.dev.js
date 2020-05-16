@@ -24,14 +24,16 @@ function photoUploaded() {
     img.src = zdj.src;
 
     img.onload = function () {
-      var canvas = document.createElement('canvas');
-      var ctx = canvas.getContext('2d');
+      var canvas = document.createElement("canvas");
+      var ctx = canvas.getContext("2d");
+      var column = document.getElementById("righted");
       canvas.width = newWidth;
       canvas.height = newHeight;
+      ctx.filter = "blur(50px)";
       ctx.drawImage(img, 0, 0, newWidth, newHeight);
-      document.body.appendChild(canvas);
+      column.appendChild(canvas);
     };
   }
 
-  document.querySelector('#dupaa').onclick = createBackground;
+  document.querySelector("#transformuj").onclick = createBackground;
 }

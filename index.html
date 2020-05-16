@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<script type="text/javascript" src="jquery-3.5.1.js"></script>
-<script type="text/javascript" src="loadPhoto.js"></script>
-<script type="text/javascript" src="transform.js"></script>
-<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-    <div class="content">
-        <header>
-          <h1>Twoja aplikacja</h1>
-        </header>
-        <p>Nacisnij przycisk, aby wybrać zdjęcie, które chcesz konwertować: </p>
-          <fieldset>
-          <input type="file" id="photoUpload" name="files[]">
-          <label id="uploadButton" for="photoUpload">Wybierz zdjęcie</label>
-          </fieldset>
-        <div class="result">
-          <div id="lefted">
-              <h2 id="uploaded">Twoje zdjęcie!</h2>
-              <br>
-              <p id="wymiary"></p> 
-              <br>
-          </div>
-          <div id="centered">
-            <button id="transformuj">Transformuj</button>
-          </div>
-          <div id="righted">a</div>
-          
+    <head>
+        <meta charset="UTF-8" />
+        <title>Insert title here</title>
+        <script type="text/javascript" src="jquery-3.5.1.js"></script>
+        <script type="text/javascript" src="loadPhoto.js"></script>
+        <script type="text/javascript" src="transform.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <div class="content">
+            <header>
+                <h1>Twoja aplikacja</h1>
+            </header>
+            <p>
+                Nacisnij przycisk, aby wybrać zdjęcie, które chcesz konwertować:
+            </p>
+            <fieldset>
+                <input type="file" id="photoUpload" name="files[]" />
+                <label id="uploadButton" for="photoUpload">Wybierz zdjęcie</label>
+            </fieldset>
+            <div class="result">
+                <div id="lefted">
+                    <h2 id="uploaded">Twoje zdjęcie!</h2>
+                    <br />
+                    <p id="wymiary"></p>
+                    <br />
+                </div>
+                <div id="centered">
+                    <button id="transformuj">Transformuj</button>
+                </div>
+                <div id="righted">
+                    <h2 id="transformed">Twój rezultat!</h2>
+                    <br />
+                </div>
+            </div>
         </div>
-      
-      </div>
 
-  <footer id="author">BlurApp.js by <em>Josek-dev</em></footer>
-</body>
+        <footer id="author">BlurApp.js by <em>Josek-dev</em></footer>
+    </body>
 </html>

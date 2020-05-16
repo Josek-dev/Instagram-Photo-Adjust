@@ -12,7 +12,11 @@ body {
   background: #eee;
   margin: 0;
   padding: 0;
-  font-family: Calibri, Tahoma, Geneva, Verdana, sans-serif;
+  font-family: BlinkMacSystemFont,
+  "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans",
+  "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 input {
@@ -21,16 +25,43 @@ input {
     opacity: 0;
 }
 
+p:first-of-type {
+    display: inline-block;
+    font-weight: 200;
+    font-size: 24px;
+    color: #555;
+    text-shadow: 1px 1px 0px #fff;
+}
+
+label, button {
+    display: block;
+    background: var(--ig-gradient), black;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 8px black;
+    box-shadow: 5px 5px 10px #999;
+    font-family: Calibri, Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
 #uploadButton {
-    display:block;
+    display: inline-block;
     width: 150px;
     margin-bottom:15px;
-    padding: 5px;
-    text-align: center;
-    background: var(--ig-gradient);
-    border-radius: 15px 15px 0px 0px;
-    text-shadow: 1px 1px 8px black;
-    color: white;
+    padding: 15px;
+}
+
+#transformuj {
+    margin: 0 auto;
+    padding: 15px;
+    box-shadow: 5px 5px 10px #999;
+}
+
+#transformuj:hover {
+    box-shadow: -5px 5px 10px #999;
+    filter: grayscale(0.3);
+
 }
 
 .originalImage {
@@ -93,39 +124,50 @@ fieldset {
 
 .result {
   display: flex;
-  background: #fff;
+  background: #eee;
   padding:0;
 }
 
-#uploaded {
+h2 {
   font-size: 18px;
   color:#c13584;
-  display:none;
 }
+
+#uploaded {
+    display: none;
+}
+
 #lefted { 
   order: 1;
   width: 40%;
   text-align:center;
   margin: 0 auto;
+  box-sizing: border-box;
+  border-right: 1px #ddd solid;
 }
 #centered {
   order: 2;
-  background:cyan;
   width: 20%;
-  margin:0;
+  margin: auto;
+  padding:0;
+  text-align:center;
 }
+
 #righted {
   order: 3;
-  background: red;
   width:40%;
-  margin:0;
+  margin:0 auto;
+  text-align:center;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border-left: 1px #ddd solid;
 }
 
 #author {
   width: 100%;
   height: 20px;
   background: black;
-  font-family: Consolas, "Lucida Console";
+  font-family: Operator, Consolas, "Lucida Console";
   font-size: 14px;
   color: #4da64d;
   text-align: center;
@@ -145,5 +187,9 @@ em::after {
   font-weight: bolder;
   visibility: visible;
   animation: blinks 3s infinite ease-in;
+}
+
+#righted > canvas {
+    width: 80%;
 }
 
