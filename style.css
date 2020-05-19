@@ -190,5 +190,7 @@ em::after {
 
 #righted > canvas {
     width: 80%;
+    box-sizing: border-box;
+    border: 5px #833ab4 solid;
 }
 

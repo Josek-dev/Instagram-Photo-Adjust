@@ -34,11 +34,18 @@ function photoUploaded() {
             var column = document.getElementById("righted");
             canvas.width = bgWidth;
             canvas.height = bgHeight;
-            ctx.filter = "blur(20px)";
+            ctx.transform = "scale(1.1)";
             ctx.drawImage(img, 0, 0, bgWidth, bgHeight);
             column.appendChild(canvas);
             var canvas2 = document.createElement('canvas');
+            ctx.filter = "blur(15px)";
+            ctx.drawImage(img, 0, 0, bgWidth, bgHeight);
+            var canvas3 = document.createElement('canvas');
             ctx.filter = "blur(0px)";
+            ctx.shadowColor = "black";
+            ctx.shadowBlur = 40;
+            ctx.shadowOffsetX = 0;
+            ctx.shadowOffsetY = 5;
             ctx.drawImage(img, span, 0, newWidth, newHeight);
 
         };
